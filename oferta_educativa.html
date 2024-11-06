@@ -1,0 +1,108 @@
+﻿
+<html>
+<head>
+    <title>Oferta Educativa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: margin-left 0.3s;
+        }
+        .menu {
+            width: 200px;
+            height: 100%;
+
+            background-color: black;
+            color: white;
+            position: fixed;
+            left: -220px;
+            transition: left 0.3s;
+            padding: 10px;
+        }
+        .menu-item {
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            outline: none;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .menu-item i {
+            margin-right: 10px;
+        }
+        .menu-item:hover {
+            background-color:#FF0000;
+        }
+
+        .toggle-button {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            transition: left 0.3s;
+        }
+        .open {
+            left: 0;
+        }
+        .toggle-button.open {
+            left: 210px;
+        }
+
+      .mover-texto {
+
+       margin-left: 5%;
+       }
+
+
+    </style>
+
+</head>
+<BODY BACKGROUND="fondo.png" TEXT="#FFFFFF">
+<button class="toggle-button" id="toggleButton" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+</button>
+
+<div class="menu" id="menu">
+    <a class="menu-item" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+
+    <a class="menu-item" href="historia.html"><i class="fas fa-book"></i> Historia</a>
+
+    <a class="menu-item" href="vida_estudiantil.html"><i class="fas fa-user-graduate"></i> Vida Estudiantil</a>
+
+    <a class="menu-item" href="oferta_educativa.html"><i class="fas fa-dollar-sign"></i> Oferta Educativa</a>
+
+    <a class="menu-item" href="contactanos.html"><i class="fas fa-phone"></i> Contáctanos</a>
+</div>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+
+        const toggleButton = document.getElementById('toggleButton');
+        menu.classList.toggle('open');
+        toggleButton.classList.toggle('open');
+        if (menu.classList.contains('open')) {
+            menu.style.left = '0';
+        } else {
+            menu.style.left = '-220px';
+        }
+    }
+</script>
+<center>
+<br>
+<br>
+ <h1> Oferta Estudiantil "Instituto Dionisio de Herrera"</h1>
+ <img src="oferta.png" width="500">
+</center>
+</body>
+</html>

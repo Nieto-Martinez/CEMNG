@@ -1,0 +1,131 @@
+﻿<html>
+<head>
+    <title>HISTORIA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: margin-left 0.3s;
+        }
+        .menu {
+            width: 200px;
+            height: 100%;
+
+            background-color: black;
+            color: white;
+            position: fixed;
+            left: -220px;
+            transition: left 0.3s;
+            padding: 10px;
+        }
+        .menu-item {
+            padding: 10px;
+            color: white;
+            cursor: pointer;
+            outline: none;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .menu-item i {
+            margin-right: 10px;
+        }
+        .menu-item:hover {
+            background-color:#32CD32;
+        }
+
+        .toggle-button {
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: black;
+            color: white;
+            border: none;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            transition: left 0.3s;
+        }
+        .open {
+            left: 0;
+        }
+        .toggle-button.open {
+            left: 210px;
+        }
+
+      .mover-texto {
+
+       margin-left: 5%;
+       }
+
+
+    </style>
+
+</head>
+<BODY BACKGROUND="fondo.png" TEXT="#FFFFFF">
+<button class="toggle-button" id="toggleButton" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+</button>
+
+<div class="menu" id="menu">
+    <a class="menu-item" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+
+    <a class="menu-item" href="historia.html"><i class="fas fa-book"></i> Historia</a>
+
+    <a class="menu-item" href="vida_estudiantil.html"><i class="fas fa-user-graduate"></i> Vida Estudiantil</a>
+
+    <a class="menu-item" href="oferta_educativa.html"><i class="fas fa-dollar-sign"></i> Oferta Educativa</a>
+
+    <a class="menu-item" href="contactanos.html"><i class="fas fa-phone"></i> Contáctanos</a>
+</div>
+
+<script>
+    function toggleMenu() {
+        const menu = document.getElementById('menu');
+
+        const toggleButton = document.getElementById('toggleButton');
+        menu.classList.toggle('open');
+        toggleButton.classList.toggle('open');
+        if (menu.classList.contains('open')) {
+            menu.style.left = '0';
+        } else {
+            menu.style.left = '-220px';
+        }
+    }
+</script>
+<center>
+<br>
+<br>
+    <h1>Historia del "Instituto Dionisio de Herrera"</h1>
+    <img src="logo.png" width="180">
+</center>
+<h3>
+<p class="mover-texto">El Instituto DIONISIO DE HERRERA fue fundado un 09 de octubre del año de 1993,
+ con el ideal de darle a la juventud de nuestra Ciudad Capital la oportunidad de recibir calidad Educativa,
+ basandose en la diciplina, valores morales, espiritales y culturales.</p>
+
+<p class="mover-texto">Con mas de 20 años de funcionamiento el instituto Dionisio de Herrera ha formado  a hombres y mujeres que hoy en dia 
+con el desarrollo de nuestra Nacion.</p>
+
+<p class="mover-texto">MODALIDADES</p>
+<p class="mover-texto">El instituto Dionisiso de Herrera cuenta en la actualida con las siguientes areas de estudio:</p>  
+<ol class="mover-texto">
+<li class="mover-texto">Tercer Ciclo de Educacion Basica.
+<li class="mover-texto">Bachillerato en Ciencias y Humanidades. 
+<li class="mover-texto">Bachillerato Tecnico Profesional en Contaduria y Finanzas. 
+<li class="mover-texto">Bachillerato Tecnico Profesional en Informatica.  
+</ol>
+<p class="mover-texto">En las modalidades de Precencial e Isemed.</p>
+
+<p class="mover-texto">Nuestro instituto cuenta con personal capacitado, egresados de la Universidad Pedagogica.</p>
+<p class="mover-texto">Bajo una nueva administracion dirigida por el Lic. Juan Carlos Castillo como director, Lic. Ramon Lopez
+commo secretario y la Lic. Yajaira Salcedo como consejera.</p>
+<p class="mover-texto">Dicha Institucion Cuenta con una Poblacion de 300 Estudiantes. Estamos ubicados  en Barrio Abajo, a media
+cuadra de la Iglesia el Calvario, cerca del Teatro Manuel Bonilla.</p> 
+<h3>
+</body>
+</html>
